@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="{% static 'plugins/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'plugins/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'plugins/css/style.css' %}">
+
+    <title>Quater Water Supply Master</title>
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <nav class="navbar navbar-default" id="nav">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <h1> POLIS </h1>
+                    </a>
+                </div>
+                <div id="navbar1" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav pull-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Old
+                                Reports
+                                <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li class="dropdown-header">Nav header</li>
+                                <li><a href="#">Separated link</a></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Masters
+                                <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="bank_master.html"> Bank Master </a></li>
+                                <li><a href="caste_master.html"> Caste Master </a></li>
+                                <li><a href="da_master.html"> Da Master </a></li>
+                                <li><a href="education_master.html"> Education Master </a></li>
+                                <li><a href="employee_master.html"> Employee Master </a></li>
+                                <li><a href="fund_master.html"> Fund Master </a></li>
+                                <li><a href="hra_master.html"> Hra Master </a></li>
+                                <li><a href="insurance_add_master.html"> Insurance ADD Master </a></li>
+                                <li><a href="language_master.html"> Language Master </a></li>
+                                <li><a href="leaves_master.html"> Leaves Master </a></li>
+                                <li><a href="loan_address_master.html"> Loan Address Master </a></li>
+                                <li><a href="loans_master.html"> Loans Master </a></li>
+                                <li><a href="other_deduction_master.html"> Other Deduction Master </a></li>
+                                <li><a href="punishment_master.html"> Punishment Master </a></li>
+                                <li><a href="quater_master.html"> Quarter Master </a></li>
+                                <li><a href="quarter_water_supply_master.html"> Quarter Water Supply Master </a></li>
+                                <li><a href="rank_master.html"> Rank Master </a></li>
+                                <li><a href="rewards_master.html"> Rewards Master </a></li>
+                                <li><a href="scale_master.html"> scale Master </a></li>
+                                <li><a href="state_master.html"> State Master </a></li>
+                                <li><a href="subdivision_master.html"> SubDivision Master </a></li>
+                                <li><a href="ta_master.html"> TA Master </a></li>
+                                <li><a href="telephone_master.html"> Telephone Master </a></li>
+                                <li><a href="trainings_master.html"> Trainings Master </a></li>
+                                <li><a href="treasury_code_master.html"> Treasury Code Master </a></li>
+                                <li><a href="working_place_master.html"> Working Place Master </a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">FMS
+                                <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li class="dropdown-header">Nav header</li>
+                                <li><a href="#">Separated link</a></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">BUdget
+                                <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li class="dropdown-header">Nav header</li>
+                                <li><a href="#">Separated link</a></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="main">
+            <div class="container">
+
+                <div class="row">
+                    <form action="/add/" method="post">
+                    {% csrf_token %}
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="box">
+                            <h2 class="text-center ptb-20"> Quater Water Supply Master </h2>
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <div class="row ptb-10">
+                                        <div class="col-md-5">
+                                            <label> Working Place </label>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <select name="t1" class="form-control" id="select">
+                                                <option > Working Place </option>
+                                                <option > MYSURE </option>
+                                                <option > UDUPI</option>
+                                                <option > KOLAR </option>
+                                                <option > BANGLORE</option>
+                                                <option > GULBERGA</option>
+                                                <option > BIDAR </option>
+                                                <option > BELLARY </option>
+                                                <option > DHARWAD </option>
+                                                <option > HASSAN </option>
+                                                <option > MANDYA </option>
+                                                <option > KOPPAL </option>
+                                                <option > TUMKUR </option>
+                                                <option > RAICHUR </option>
+                                                <option > SHIMOGA </option>
+                                                <option > GADAG</option>
+                                                <option > BIJAPUR </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row ptb-10 option" id="country">
+                                        <div class="col-md-5">
+                                            <label> Working Supply Place </label>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <input type="text" name="t2" class="form-control" placeholder="" />
+                                        </div>
+                                    </div>
+                                    <div class="row ptb-10 option" id="country">
+                                        <div class="col-md-5">
+                                            <label> Electric Meter Number </label>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <input type="number"  name="t3" class="form-control" placeholder="" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="row">
+                                        <button class="btn btn-success des "> ADD </button>
+                                    </div>
+                                    <div class="row">
+                                        <button class="btn btn-warning des "> Update </button>
+                                    </div>
+                                    <div class="row">
+                                        <button class="btn btn-primary des "> Cancel </button>
+                                    </div>
+                                    <div class="row">
+                                        <button class="btn btn-danger des "> Delete </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="table-table">
+                                        <table class="table table-bordered">
+                                            <thead class="active whitespace-nowrap">
+                                                <tr>
+                                                    <th scope="col">sn</th>
+                                                    <th scope="col">Working Place</th>
+                                                    <th scope="col">Working Supply Place</th>
+                                                    <th scope="col">Electric Meter Number</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="tb-font">
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Add Bank</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" placeholder="Entry New Caste" class="form-control input_c" />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary add_btn" data-dismiss="modal">Add Caste</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="myModal1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Add Branch</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" placeholder="Entry New Sub Caste" class="form-control input_c" />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary add_btn" data-dismiss="modal">Add Sub Caste</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="{% static 'plugins/js/jquery.min.js' %}"> </script>
+    <script src="{% static 'plugins/js/bootstrap.min.js' %}"> </script>
+    <!-- <script src="plugins/js/main.js"> </script> -->
+
+</body>
+
+</html>
